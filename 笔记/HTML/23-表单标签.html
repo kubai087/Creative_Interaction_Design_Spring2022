@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表单中三个部分，表单域，表单控件和提示信息 -->
+    <form action="url地址" method="get/post两种提交方式" name="表单域名称">
+        <!-- text 文本框 用户可以在里面输入任何文字 -->
+        <!-- maxlength最大可输入文字 -->
+        用户名：<input type="text" name="username" value="输入姓名（框子里面的提示语）在文本框是这样的，会被用户的输入值代替，下面的选择标签的value是预设好的" maxlength="6"> <br>
+        密码：<input type="password" name="password"> <br>
+
+        <!-- 单选按钮和复选框按钮可以设置checked值，即页面打开之后默认勾选的值 -->
+        <!-- radio 单选按钮，可以实现多选 -->
+        <!-- radio 选项有同样名字的情况下，就可以只选一个了 这就是name的作用，用于区分-->
+        性别：男 <input type="radio" name="gender" value="男（value值会被送到后台）"checked="checked"> 女 <input type="radio" name="gender"> <br>
+        <!-- checkbox 多选按钮 -->
+        爱好：吃饭<input type="checkbox" name="hobby" value="chifan" checked="checked"> 睡觉<input type="checkbox" name="hobby" checked="checked"> 打游戏<input type="checkbox" name="hobby"> <br>
+
+        <input type="submit" value="免费注册"> 
+        <input type="reset" value="重新填写">
+        <!-- ↓ 一个普通按钮，通常和JavaScript脚本搭配使用 -->
+        <input type="button" value="获取验证码"> <br>
+        <!-- ↓ 文件域 用于上传文件 -->
+        <input type="file"> <br><br>
+
+        <!-- lable 标签 -->
+        <label for="用户名">用户名，在这里可以添加img标签</label>
+        <input type="text" name="username" maxlength="6" id="用户名"> <br>
+        <!-- for后面的str和id的str要一样，并且相呼应，这样点击“用户名”文字就可以进入文本框了 -->
+        <!-- 如果是checkbox或者radio两种类型，同理 -->
+
+        <!-- select 下拉表单元素 -->
+        籍贯<select>
+            <option>北京</option>
+            <option selected="selected">山东</option>
+            <!-- selected是默认选择的选项 -->
+            <option>天津</option>
+            <option>广东</option>
+        </select><br> <br>
+
+        <!-- textarea 文本域元素 -->
+        今日反馈：<br>
+        <!-- cols每行可以写多少字，rows可以有多少行,一般还是用CSS写-->
+        <textarea rows="6" cols="50">
+            默认文字
+        </textarea>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    main{
+        height: 2000px;
+    }
+    /* 下面的相当于给容器设置了格式 */
+    #div1 {
+        display: flex; 
+/* flex可以让元素横向或者纵向排布，默认情况下div等都是纵向排布 */
+        justify-content: space-between;
+        flex-direction: column;
+        height: 500px;
+        width: 80%;
+        margin: 2px;
+    }
+    /* 容器里面的div大类的格式 */
+    #div1 > div {
+        background-color: red;
+        height:10px;
+        }
+    #divsub1 {
+        flex-grow: 1;
+    }
+    #divsub2 {
+        flex-grow: .5;
+    }
+</style>
+<main>
+    <div id="div1">
+        <div id="divsub1"></div>
+        <div id="divsub2"></div>
+        <div></div>
+        <div></div>
+    </div>
+</main>
+</html>
